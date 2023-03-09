@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <main>
+    <div class="mainContainer">
+      <div class="headingContainer">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="imageContainer">
+        <img src="images/hero-mobile.jpg" alt="">
+        <div class="desktopImage"></div>
+      </div>
+      <div class="textContainer">
+        <h1>
+          <span class="pinkHeadingText">We're</span>
+          <br>
+          <span class="darkHeadingText"> coming soon</span>
+        </h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form action="" class="emailForm">
+          <label for=""></label>
+          <input type="text" name="" id="emailInput" placeholder="Email Address">
+          <img src="images/icon-error.svg" alt="" class="errorImage">
+          <button class="button"><img src="images/icon-arrow.svg" alt=""></button>
+        </form>
+        <span class="errorMessage"></span>
+        
+        
+      </div>
+    </div>
+  </main>
+</body>
+
+<script>
+  let emailForm = document.querySelector('.emailForm');
+  let emailInput = document.getElementById('emailInput');
+  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  let errorMessage = document.querySelector('.errorMessage');
+  let button = document.querySelector(".button");
+  let errorImage = document.querySelector('.errorImage')
+  
+  function validateEmail() {
+    
+
+    if(validRegex.test(emailInput.value)) {
+      errorMessage.innerText = ''
+      errorImage.classList.remove('active');
+    } else {
+      errorMessage.innerText = 'Please provide a valid email';
+      errorImage.classList.add('active');
+    }
+  };
+
+  button.addEventListener('click', function (event) {
+    event.preventDefault()
+    validateEmail()
+  })
+
+</script>
+
+</html>

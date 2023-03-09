@@ -1,0 +1,339 @@
+/*
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 6%, 24%);
+    height: 100vh;
+    
+}
+
+main {
+    height: 100%;
+    width: auto;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+                linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingContainer {
+    padding: 1.75rem;
+    width: 100%;
+}
+
+.headingContainer img {
+    width: 6.25rem;
+}
+
+.imageContainer {
+    width: 100%;
+    height: auto;
+    
+}
+
+.imageContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1.75rem 4rem 1.75rem;
+    text-align: center;
+}
+
+.pinkHeadingText {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+}
+
+.darkHeadingText {
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+}
+
+.textContainer p {
+    color: hsl(0, 36%, 70%);
+    margin: 1.75rem 0 2rem 0;
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+.emailForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    position: relative;
+}
+
+.emailForm input {
+    border-radius: 2rem;
+    border: 1px solid hsl(0, 21%, 77%);
+    width: 100%;
+    height: 3rem;
+    padding: 1.5rem;
+    color: hsl(0, 6%, 24%);
+}
+
+button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 2rem;
+    width: 4rem;
+    height: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 .5rem 1.5rem hsl(0, 80%, 86%);
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 65%, 91%), hsl(0, 57%, 75%));
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid hsl(0, 57%, 50%);
+}
+
+input::placeholder {
+    color: hsl(0, 21%, 73%);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.errorMessage {
+    display: inline;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-top: .6rem;
+    font-size: .65rem;
+    color: hsl(0, 54%, 59%);
+}
+
+.errorImage {
+    display: none;
+    position: absolute;
+    right: 4.75rem;
+    width: 1.3rem;
+}
+
+.active {
+    display: inline;
+}
+
+@media (min-width: 500px) {
+    .mainContainer {
+        width: 500px;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
+        color: hsl(0, 6%, 24%);
+        height: 100vh;
+        
+    }
+    
+    main {
+        height: 100%;
+        width: auto;
+        /*background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+                    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));*/
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-blend-mode: lighten;
+        display: block;
+        
+    }
+
+    .mainContainer {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        grid-template-rows: 1fr 2.4fr;
+        justify-content: normal;
+        align-items:normal;
+        width: 100%;
+        height: 100%;
+    }
+
+    .imageContainer {
+        width: auto;
+        height: 100%;
+        display: inline;
+        grid-row-end: span 2;
+    }
+
+    .imageContainer img {
+        display: none;
+    }
+
+    .desktopImage {
+        background-image: url(images/hero-desktop.jpg);
+        width: 100%;
+        height: 100%;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .headingContainer {
+        padding: 3rem 10rem;
+        width: 100%;
+    }
+
+    .headingContainer img {
+        width: 10rem;
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 0 13rem 0 10rem;
+        text-align: left;
+    }
+    
+    .pinkHeadingText {
+        color: hsl(0, 36%, 70%);
+        font-weight: 300;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: .6rem;
+    }
+    
+    .darkHeadingText {
+        font-weight: 600;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: .6rem;
+    }
+    
+    .textContainer p {
+        color: hsl(0, 36%, 70%);
+        margin: 1.75rem 0 2.5rem 0;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+    
+    .emailForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        position: relative;
+    }
+    
+    .emailForm input {
+        border-radius: 2rem;
+        border: 1px solid hsl(0, 21%, 77%);
+        width: 100%;
+        height: 4rem;
+        padding: 1.5rem;
+        color: hsl(0, 6%, 24%);
+        font-size: 1rem;
+    }
+    
+    button {
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        border-radius: 2rem;
+        width: 6rem;
+        height: 64px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        box-shadow: 0 .5rem 1.5rem hsl(0, 80%, 86%);
+    }
+
+    input:focus {
+        outline: none;
+        border: 1px solid hsl(0, 57%, 50%);
+    }
+
+    input::placeholder {
+        color: hsl(0, 21%, 73%);
+    }
+    
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    .errorMessage {
+        display: inline;
+        text-align: left;
+        padding-left: 1.5rem;
+        padding-top: .6rem;
+        font-size: .65rem;
+        color: hsl(0, 54%, 59%);
+    }
+    
+    .errorImage {
+        display: none;
+        position: absolute;
+        right: 6.75rem;
+        width: 1.3rem;
+    }
+    
+    .active {
+        display: inline;
+    }
+}

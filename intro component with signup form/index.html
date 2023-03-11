@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  
+</head>
+<body>
+  <main>
+    <div class="mainContainer">
+      <article>
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+      </article>
+      <div class="mainFormContainer">
+        <div class="banner">
+          <h2>Try it free 7 days
+            <span class="smallBannerText"> then $20/mo. thereafter</span>
+          </h2>
+        </div>
+        <div class="formContainer">
+          <form action="">
+            <div class="inputBox">
+              <input type="text" name="" class="firstName" placeholder="First Name">
+              <img src="images/icon-error.svg" alt="" class="errorImage">
+              <span class="errorText">First Name cannot be empty</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" class="lastName" placeholder="Last Name">
+              <img src="images/icon-error.svg" alt="" class="errorImage">
+              <span class="errorText">Last Name cannot be empty</span>
+            </div>
+            <div class="inputBox">
+              <input type="email" name="" class="email" placeholder="Email Address">
+              <img src="images/icon-error.svg" alt="" class="errorImage">
+              <span class="emailErrorPlaceholder">email@example/com</span>
+              <span class="errorText">Looks like this is not an email</span>
+            </div>
+            <div class="inputBox">
+              <input type="password" name="" class="password" placeholder="Password">
+              <img src="images/icon-error.svg" alt="" class="errorImage">
+              <span class="errorText">Password cannot be empty</span>
+            </div>
+            <input type="button" value="Claim your free trial" class="button">
+            <div class="footer">
+              <span class="greyFooterText">By clicking the button, you are agreeing to our <span class="redFooterText">Terms and Services</span></span>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script>
+  let button = document.querySelector(".button");
+  let firstName = document.querySelector('.firstName');
+  let lastName = document.querySelector('.lastName');
+  let email = document.querySelector('.email');
+  let password = document.querySelector('.password');
+  let errorText = document.querySelectorAll('.errorText');
+  let errorImage = document.querySelectorAll('.errorImage');
+  let emailErrorPlaceholder = document.querySelector('.emailErrorPlaceholder');
+
+  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+  let inputs = document.getElementsByTagName('input');
+
+
+  button.addEventListener('click', function event() {
+    for(let x = 0; x < inputs.length; x++) {
+    if(inputs[x].value == "") {
+        errorImage[x].classList.add('active');
+        errorText[x].classList.add('active');
+        inputs[x].removeAttribute('placeholder');
+        inputs[x].classList.add('redBorder');
+    } else if(!validRegex.test(email.value) && email.value != "") {
+        errorImage[2].classList.add('active');
+        errorText[2].classList.add('active');
+        inputs[2].classList.add('redBorder');
+    } else {
+      errorImage[x].classList.remove('active');
+      errorText[x].classList.remove('active');
+      inputs[x].removeAttribute('placeholder');
+      inputs[x].classList.remove('redBorder');
+    }
+    if(email.value == "") {
+      emailErrorPlaceholder.classList.add('active');
+    }
+  }
+  });
+
+  email.addEventListener('click', function event() {
+    emailErrorPlaceholder.classList.remove('active');
+  });
+  
+
+</script>
+
+</html>

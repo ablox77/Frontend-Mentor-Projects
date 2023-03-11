@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(257, 41%, 53%);
+    padding: 2.25rem 2.4rem 2.6rem 2.4rem;
+}
+
+header {
+    height: 6rem;
+    width: 100%;
+    
+}
+
+header img {
+    width: 8.4rem;
+    margin-right: 100%;
+}
+
+.mainImage {
+    width: 100%;
+}
+
+article {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+    padding: 0 1rem;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    padding: 1rem 0 1.5rem 0;
+    font-size: 1.08rem;
+    line-height: 1.6rem;
+}
+
+button {
+    border-radius: 2rem;
+    border: none;
+    width: 14rem;
+    height: 2.65rem;
+    color: rgb(105, 100, 100);
+    font-family: "Open Sans", sans-serif;
+    font-size: .85rem;
+    box-shadow: 0 .2rem 1.3rem hsl(258, 36%, 35%);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    padding-top: 4rem;
+}
+
+.socialMediaIconFacebook, .socialMediaIconTwitter, .socialMediaIconInstagram {
+    border: 1px solid white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .35rem;
+}
+
+.socialMediaIconInstagram {
+    padding: .2rem;
+}
+
+.facebook, .twitter {
+    width: .8rem;
+}
+
+.instagram {
+    width: 1.1rem;
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+    cursor: pointer;
+}
+
+.socialMediaIconFacebook:hover, .socialMediaIconInstagram:hover, .socialMediaIconTwitter:hover {
+    border: 1px solid hsl(300, 50%, 52%);
+    filter: invert(51%) sepia(47%) saturate(3297%) hue-rotate(268deg) brightness(78%) contrast(94%);
+}
+
+@media (min-width: 900px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .mainContainer {
+        display: grid;
+        grid-template-columns: 25% 29.5% 25% 20.5%;
+        grid-template-rows: 22% 68% 10%;
+        grid-template-areas: 
+            "header header header header"
+            "img img text text"
+            "footer footer footer footer";
+        width: 100%;
+        height: 100%;
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: hsl(257, 41%, 53%);
+        padding: 2.25rem 6rem 2.6rem 6rem;
+    }
+    
+    header {
+        height: 6rem;
+        width: 100%;
+        grid-column-start: header-start;
+        grid-column-end: header-end;
+        grid-row-start: header-start;
+        grid-row-end: header-end;
+    }
+    
+    header img {
+        width: 13.25em;
+        margin-right: 100%;
+    }
+    
+    .mainImage {
+        width: 100%;
+        height: auto;
+        grid-area: img-start / img-start / img-end / img-end;
+    }
+    
+    article {
+        text-align: left;
+        /*display: flex;
+        flex-direction: column;
+        align-items: flex-start;*/
+        height: 100%;
+        padding: 2.8rem 0 0 3rem;
+        grid-area: text-start / text-start / text-end / text-end;
+    }
+    
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 2.7rem;
+        color: white;
+        padding: 0 4rem 0 0;
+    }
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        font-weight: 400;
+        padding: 1rem 1rem 1.5rem 0;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    
+    button {
+        border-radius: 2.5rem;
+        border: none;
+        width: 13.5rem;
+        height: 3.2rem;
+        color: rgb(105, 100, 100);
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        box-shadow: 0 .2rem 1.3rem hsl(258, 36%, 35%);
+    }
+    
+    footer {
+        grid-area: footer-start / footer-start / footer-end / footer-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100%;
+        gap: .6rem;
+        padding: 0;
+        
+    }
+    
+    .socialMediaIconFacebook, .socialMediaIconTwitter, .socialMediaIconInstagram {
+        border: 1px solid white;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .65rem;
+    }
+    
+    .socialMediaIconInstagram {
+        padding: .45rem;
+    }
+    
+    .facebook, .twitter {
+        width: 1.1rem;
+    }
+    
+    .instagram {
+        width: 1.5rem;
+    }
+    
+    button:hover {
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+        cursor: pointer;
+    }
+    
+    .socialMediaIconFacebook:hover, .socialMediaIconInstagram:hover, .socialMediaIconTwitter:hover {
+        border: 1px solid hsl(300, 50%, 52%);
+        filter: invert(51%) sepia(47%) saturate(3297%) hue-rotate(268deg) brightness(78%) contrast(94%);
+    }
+}

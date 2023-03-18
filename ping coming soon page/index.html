@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  
+</head>
+<body>
+  <main>
+    <div class="mainContainer">
+      <header>
+        <img src="images/logo.svg" alt="" class="headerImg">
+        <h1><span>We are launching </span>soon!</h1>
+        <span class="subscribeMessage">Subscribe and get notified</span>
+      </header>
+      <form action="">
+        <div class="emailContainer">
+          <input type="email" name="" id="" class="emailInput" placeholder="Your email address...">
+          <span class="emailError">Please provide a valid email address</span>
+        </div>
+        
+        <input type="button" value="Notify Me" class="button">
+      </form>
+      <img src="images/illustration-dashboard.png" alt="" class="mainImg">
+      <footer>
+        <div class="socialMediaContainer">
+          <div class="iconContainerFacebook">
+            <img src="images/facebook-16.png" alt="" class="facebook">
+          </div>
+          <div class="iconContainerTwitter">
+            <img src="images/twitter-16.png" alt="" class="twitter">
+          </div>
+          <div class="iconContainerInstagram">
+            <img src="images/icons8-instagram-24.png" alt="" class="instagram">
+          </div>
+        </div>
+        <span class="copyright">&copy; Copyright Ping. All rights reserved.</span>
+      </footer>
+    </div>
+  </main>
+  
+</body>
+
+<script>
+
+  //variable declarations
+
+  let emailInput = document.querySelector('.emailInput');
+  let button = document.querySelector('.button');
+  let emailError = document.querySelector('.emailError');
+  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  //email validation event listener
+
+  button.addEventListener('click', function (event) {
+    if(!validRegex.test(emailInput.value)) {
+      event.preventDefault();
+      emailError.classList.add('activeErrorMessage');
+      emailInput.classList.add('activeBorder');
+    } else {
+      emailError.classList.remove('activeErrorMessage');
+      emailInput.classList.remove('activeBorder');
+    }
+  });
+
+
+</script>
+</html>

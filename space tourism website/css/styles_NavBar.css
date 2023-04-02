@@ -1,0 +1,407 @@
+/*
+Colors:
+Black: #0B0D17 hsl(230, 35%, 7%)
+Light-grey: #D0D6F9 hsl(231, 77%, 90%)
+Off-white: #FFFFFF hsl(0, 0%, 100%)
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%)
+}
+
+body {
+    width: 100vw;
+    position: relative;
+    background-image: url(http://127.0.0.1:5500/images/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+}
+
+/*--------------------
+------Header----------
+--------------------*/
+
+header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLineDecoration {
+    display: none;
+}
+
+.logoAnchor img {
+    width: 40px;
+}
+
+.hamburgerAnchor img {
+    width: 24px;
+    height: 21px;
+    
+}
+
+/*--------------------
+------Nav Bar----------
+--------------------*/
+
+.headerNav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(247, 241, 241, 0.04);
+    backdrop-filter: blur(40px);
+    height: 100vh;
+    min-width: 254px;
+    z-index: 12;
+}
+
+.headerNav ul {
+    list-style-type: none;
+    padding-left: 32px;
+    text-align: left;
+}
+
+.headerNav ul li {
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.headerNav ul li a {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.headerNav ul li a span {
+    font-weight: 700;
+}
+
+.activePageNavAnchor {
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    width: 4px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: none;
+}
+
+.headerNav ul li:hover .activePageNavAnchor {
+    display: inline-block;
+    opacity: .5;
+}
+
+/*Use Javascript for active scrolling state*/
+
+.activePageNavAnchor-Scrolling {
+    display: inline-block;
+}
+
+.listCloseIcon {
+    padding: 33.95px 26.45px 64.95px 0;
+    text-align: right;
+}
+
+.navCloseIcon:hover {
+    cursor: pointer;
+}
+
+.hamburgerAnchor:hover {
+    cursor: pointer;
+}
+
+/*Use javascript to open and close nav bar*/
+
+.openNavBar {
+    display: inline-block;
+}
+
+/*--------------------
+--------Main----------
+--------------------*/
+
+
+
+/*--------------------
+------Explore---------
+--------------------*/
+
+
+
+@media screen and (min-width: 376px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+/*--------------------
+--Tablet Media Query--
+--------------------*/
+
+@media screen and (min-width: 550px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerLineDecoration {
+        display: none;
+    }
+
+    .logoAnchor {
+        padding: 24px 0 21px 39px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 39px 48px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 450px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.36px;
+        font-size: 14px;
+    }
+
+    .headerNav ul li a span {
+        display: none;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    
+
+    /*--------------------
+    ------Explore---------
+    --------------------*/
+
+    
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/*--------------------
+--Desktop Media Query-
+--------------------*/
+
+@media screen and (min-width: 1100px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: relative;
+    }
+
+    .headerLineDecoration {
+        height: 1px;
+        width: 473px;
+        background-color: hsl(0, 0%, 100%, 0.3);
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 167px;
+        display: block;
+        z-index: 10;
+    }
+
+    .logoAnchor {
+        padding: 64px 0 61px 55px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 38px 165px 38px 123px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 830px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .headerNav ul li a span {
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-right: 5px;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    
+
+    /*--------------------
+    ------Explore---------
+    --------------------*/
+
+    
+}

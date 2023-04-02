@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="../css/styles_DestinationPages.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Bellefair&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logoAnchor">
+      <img src="../images/shared/logo.svg" alt="">
+    </a>
+    <div type="button" class="hamburgerAnchor" id="hamburgerAnchor">
+      <img src="../images/shared/icon-hamburger.svg" alt="">
+    </div>
+    <div class="headerLineDecoration"></div>
+    <nav class="headerNav" id="headerNav">
+      <div class="listCloseIcon">
+        <img src="../images/shared/icon-close.svg" alt="" type="button" class="navCloseIcon" id="navCloseIcon">
+      </div>
+      <ul>
+        <li>
+          <a href="../index.html" id="homeNavAncor" class="navAnchor"><span>00</span> Home</a>
+          <div class="activePageNavAnchor"></div>
+        </li>
+        <li>
+          <a href="../pages/destination-moon.html" id="destinationNavAncor" class="navAnchor"><span>01</span> Destination</a>
+          <div class="activePageNavAnchor"></div>
+        </li>
+        <li>
+          <a href="../pages/crew-commander.html" id="crewNavAncor" class="navAnchor"><span>02</span> Crew</a>
+          <div class="activePageNavAnchor"></div>
+        </li>
+        <li>
+          <a href="../pages/technology-vehicle.html" id="technologyNavAncor" class="navAnchor"><span>03</span> Technology</a>
+          <div class="activePageNavAnchor"></div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="planetSectionContainer">
+      <h2><span>01</span>Pick your destination</h2>
+      <div class="planetImageContainer">
+        <img src="../images/destination/image-titan.png" alt="" class="planetImage">
+      </div>
+    </section>
+    <section class="planetTextContainer">
+      <section class="planetDescriptionContainer">
+        <div class="pNavbarContainer">
+          <nav class="pNavbar">
+            <ul>
+              <li>
+                <a href="../pages/destination-moon.html" class="planetNavAnchor">Moon</a>
+                <div class="planetActivePageNavAnchor"></div>
+              </li>
+              <li>
+                <a href="../pages/destination-mars.html" class="planetNavAnchor">Mars</a>
+                <div class="planetActivePageNavAnchor"></div>
+              </li>
+              <li>
+                <a href="../pages/destination-europa.html" class="planetNavAnchor">Europa</a>
+                <div class="planetActivePageNavAnchor"></div>
+              </li>
+              <li>
+                <a href="../pages/destination-titan.html" class="planetNavAnchor">Titan</a>
+                <div class="planetActivePageNavAnchor"></div>
+              </li>
+            </ul>
+
+          </nav>
+        </div>
+        <h1>Titan</h1>
+        <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+      </section>
+      <hr>
+      <section class="pStatContainer">
+        <div class="pDistanceContainer">
+          <span class="pDistanceHeading">Avg. distance</span>
+          <span class="pDistanceAmount">1.6 bil. km</span>
+        </div>
+        <div class="pTravelTimeContainer">
+          <span class="pTravelTimeHeading">Est. travel time</span>
+          <span class="pTravelTimeAmount">7 years</span>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script type="text/javascript" src="../script/script_Nav.js"></script>
+  <script type="text/javascript" src="../script/script_PlanetNav.js"></script>
+</body>
+</html>

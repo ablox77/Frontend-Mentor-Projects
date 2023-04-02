@@ -1,0 +1,627 @@
+/*
+Colors:
+Black: #0B0D17 hsl(230, 35%, 7%)
+Light-grey: #D0D6F9 hsl(231, 77%, 90%)
+Off-white: #FFFFFF hsl(0, 0%, 100%)
+*/
+
+html {
+    background-color: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%)
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(http://127.0.0.1:5500/images/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------------------
+------Header----------
+--------------------*/
+
+header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLineDecoration {
+    display: none;
+}
+
+.logoAnchor img {
+    width: 40px;
+}
+
+.hamburgerAnchor img {
+    width: 24px;
+    height: 21px;
+    
+}
+
+/*--------------------
+------Nav Bar----------
+--------------------*/
+
+.headerNav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(247, 241, 241, 0.04);
+    backdrop-filter: blur(40px);
+    height: 100vh;
+    min-width: 254px;
+    z-index: 12;
+}
+
+.headerNav ul {
+    list-style-type: none;
+    padding-left: 32px;
+    text-align: left;
+}
+
+.headerNav ul li {
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.headerNav ul li a {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.headerNav ul li a span {
+    font-weight: 700;
+}
+
+.activePageNavAnchor {
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    width: 4px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: none;
+}
+
+.headerNav ul li:hover .activePageNavAnchor {
+    display: inline-block;
+    opacity: .5;
+}
+
+/*Use Javascript for active scrolling state*/
+
+.activePageNavAnchor-Scrolling {
+    display: inline-block;
+}
+
+.listCloseIcon {
+    padding: 33.95px 26.45px 64.95px 0;
+    text-align: right;
+}
+
+.navCloseIcon:hover {
+    cursor: pointer;
+}
+
+.hamburgerAnchor:hover {
+    cursor: pointer;
+}
+
+/*Use javascript to open and close nav bar*/
+
+.openNavBar {
+    display: inline-block;
+}
+
+/*--------------------
+--------Main----------
+--------------------*/
+
+.textSectionFlexContainer {
+    display:initial;
+}
+
+main .textSection {
+    padding: 24px 24px 0 24px;
+    text-align: center;
+}
+
+.textSection h5 {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    color: hsl(231, 77%, 90%);
+}
+
+.textSection h1 {
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    padding: 16px 0 20px 0;
+}
+
+p {
+    font-family: "Barlow", sans-serif;
+    font-size: 15px;
+    color: hsl(231, 77%, 90%);
+    line-height: 25px;
+}
+
+/*--------------------
+------Explore---------
+--------------------*/
+
+.exploreSection {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 81px;
+    padding-bottom: 48px;
+}
+
+.exploreContainerActive {
+    width: 240px;
+    height: 240px;
+    background-color: hsl(0, 0%, 100%, .1);
+    border-radius: 20rem;
+    position: absolute;
+    display: none;
+}
+
+.exploreAnchorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10rem;
+    background-color: hsl(0, 0%, 100%);
+    z-index: 11;
+}
+
+.exploreContainer:hover {
+    cursor: pointer;
+}
+
+.exploreDiv {
+    display: inline-block;
+    color: hsl(230, 35%, 7%);
+    text-align: center;
+    font-family: "Bellefair", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.25px;
+}
+
+/*Activate hover state with javascript*/
+
+.exploreContainerActive-Hover {
+    display: block;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/home/background-home-tablet.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+/*--------------------
+--Tablet Media Query--
+--------------------*/
+
+@media screen and (min-width: 550px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/home/background-home-tablet.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerLineDecoration {
+        display: none;
+    }
+
+    .logoAnchor {
+        padding: 24px 0 21px 39px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 39px 48px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 450px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.36px;
+        font-size: 14px;
+    }
+
+    .headerNav ul li a span {
+        display: none;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    main {
+        height: calc(100% - 96px);
+    }
+
+    .textSectionFlexContainer {
+        display: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    main .textSection {
+        padding: 106px 0 0 0;
+        text-align: center;
+    }
+
+    .textSection h5 {
+        letter-spacing: 3.38px;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .textSection h1 {
+        font-size: 150px;
+        padding: 24px 0 24px 0;
+        line-height: 150px;
+    }
+
+    p {
+        font-size: 16px;
+        color: hsl(231, 77%, 90%);
+        line-height: 28px;
+        padding: 0 159px 0 159px;
+    }
+
+    /*--------------------
+    ------Explore---------
+    --------------------*/
+
+    .exploreSection {
+        /*padding-top: 156px;*/
+        padding-bottom: 90px;
+    }
+
+    .exploreContainerActive {
+        width: 390px;
+        height: 390px;
+    }
+
+    .exploreAnchorContainer {
+        width: 242px;
+        height: 242px;
+        z-index: 11;
+    }
+
+    .exploreContainer:hover {
+        cursor: pointer;
+    }
+
+    .exploreDiv {
+        font-size: 32px;
+        line-height: 36.67px;
+        letter-spacing: 2px;
+    }
+
+    /*Activate hover state with javascript*/
+
+    .exploreContainerActive-Hover {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/*--------------------
+--Desktop Media Query-
+--------------------*/
+
+@media screen and (min-width: 1100px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: relative;
+    }
+
+    .headerLineDecoration {
+        height: 1px;
+        width: 473px;
+        background-color: hsl(0, 0%, 100%, 0.3);
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 167px;
+        display: block;
+        z-index: 10;
+    }
+
+    .logoAnchor {
+        padding: 64px 0 61px 55px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 38px 165px 38px 123px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 830px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .headerNav ul li a span {
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-right: 5px;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    main {
+        display: flex;
+        height: calc(100% - 176px)
+    }
+
+    .textSectionFlexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 131px 165px;
+        width: 59%;
+    }
+
+    main .textSection {
+        text-align: left;
+    }
+
+    .textSection h5 {
+        letter-spacing: 4.72px;
+        line-height: 33.6px;
+        font-size: 28px;
+    }
+
+    .textSection h1 {
+        font-size: 150px;
+        padding: 24px 0 24px 0;
+        line-height: 171.9px;
+    }
+
+    p {
+        font-size: 18px;
+        color: hsl(231, 77%, 90%);
+        line-height: 32px;
+        padding: 0;
+        width: 444px;
+    }
+
+    /*--------------------
+    ------Explore---------
+    --------------------*/
+
+    .exploreSection {
+        padding-right: 165px;
+        padding-bottom: 131px;
+        width: 41%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .exploreContainerActive {
+        width: 440px;
+        height: 440px;
+        position: absolute;
+        right: 82px;
+        bottom: 48px;
+    }
+
+    .exploreAnchorContainer {
+        width: 274px;
+        height: 274px;
+        z-index: 11;
+    }
+
+    .exploreContainer:hover {
+        cursor: pointer;
+    }
+
+    .exploreDiv {
+        font-size: 32px;
+        line-height: 36.67px;
+        letter-spacing: 2px;
+    }
+
+    /*Activate hover state with javascript*/
+
+    .exploreContainerActive-Hover {
+        display: block;
+    }
+}

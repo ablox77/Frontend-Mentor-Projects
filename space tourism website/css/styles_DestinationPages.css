@@ -1,0 +1,885 @@
+/*
+Colors:
+Black: #0B0D17 hsl(230, 35%, 7%)
+Light-grey: #D0D6F9 hsl(231, 77%, 90%)
+Off-white: #FFFFFF hsl(0, 0%, 100%)
+*/
+
+html {
+    background-color: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%)
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(http://127.0.0.1:5500/images/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------------------
+------Header----------
+--------------------*/
+
+header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLineDecoration {
+    display: none;
+}
+
+.logoAnchor img {
+    width: 40px;
+}
+
+.hamburgerAnchor img {
+    width: 24px;
+    height: 21px;
+    
+}
+
+/*--------------------
+------Nav Bar----------
+--------------------*/
+
+.headerNav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(247, 241, 241, 0.04);
+    backdrop-filter: blur(40px);
+    height: 100vh;
+    min-width: 254px;
+    z-index: 10;
+}
+
+.headerNav ul {
+    list-style-type: none;
+    padding-left: 32px;
+    text-align: left;
+}
+
+.headerNav ul li {
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.headerNav ul li a {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.headerNav ul li a span {
+    font-weight: 700;
+}
+
+.activePageNavAnchor {
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    width: 4px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: none;
+}
+
+.headerNav ul li:hover .activePageNavAnchor {
+    display: inline-block;
+    opacity: .5;
+}
+
+/*Use Javascript for active scrolling state*/
+
+.activePageNavAnchor-Scrolling {
+    display: inline-block;
+}
+
+.listCloseIcon {
+    padding: 33.95px 26.45px 64.95px 0;
+    text-align: right;
+}
+
+.navCloseIcon:hover {
+    cursor: pointer;
+}
+
+.hamburgerAnchor:hover {
+    cursor: pointer;
+}
+
+/*Use javascript to open and close nav bar*/
+
+.openNavBar {
+    display: inline-block;
+}
+
+/*--------------------
+--------Main----------
+--------------------*/
+
+/*--------------------
+----Planet Section----
+--------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.planetSectionContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.planetSectionContainer h2, span {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.planetSectionContainer span {
+    font-weight: 700;
+    opacity: .25;
+    padding-right: 18px;
+}
+
+.planetImageContainer {
+    padding-top: 30px;
+}
+
+.planetImage {
+    width: 170px;
+}
+
+/*--------------------
+-Planet Text Section--
+--------------------*/
+
+.planetDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pNavbarContainer {
+   width: 72.62%; 
+   height: 28px;
+   margin: 26px 0 20px 0;
+}
+
+.pNavbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pNavbar ul li {
+    position: relative;
+}
+
+.pNavbar ul li, li a {
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: hsl(231, 77%, 90%);
+}
+
+/*--------------------
+Planet Nav Active State
+--------------------*/
+
+.planetActivePageNavAnchor {
+    display: block;
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: auto;
+    top: auto;
+    display: none;
+}
+
+.pNavbar ul li:hover .planetActivePageNavAnchor {
+    display: inline-block;
+    opacity: .5;
+}
+
+/*Use Javascript for planet nav active scrolling state*/
+
+.planetActivePageNavAnchor-Scrolling {
+    display: inline-block;
+}
+
+/*--------------------
+-Planet Desc Section--
+--------------------*/
+
+.planetDescriptionContainer h1 {
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 64.18px;
+}
+
+.planetDescriptionContainer p {
+    font-family: "Barlow", sans-serif;
+    color: hsl(231, 77%, 90%);
+    line-height: 25px;
+}
+
+hr {
+    border-color: hsla(231, 15%, 26%, 1);
+    margin: 32px 0;
+}
+
+.pDistanceContainer {
+    padding-bottom: 32px;
+}
+
+.pDistanceHeading, .pDistanceAmount, .pTravelTimeHeading, .pTravelTimeAmount {
+    display: block;
+}
+
+.pDistanceHeading, .pTravelTimeHeading {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: hsl(231, 77%, 90%);
+    padding-bottom: 12px;
+}
+
+.pDistanceAmount, .pTravelTimeAmount {
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 32.09px;
+}
+
+
+
+@media screen and (min-width: 376px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+/*--------------------
+--Tablet Media Query--
+--------------------*/
+
+@media screen and (min-width: 650px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerLineDecoration {
+        display: none;
+    }
+
+    .logoAnchor {
+        padding: 24px 0 21px 39px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 39px 48px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 450px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.36px;
+        font-size: 14px;
+    }
+
+    .headerNav ul li a span {
+        display: none;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    /*--------------------
+    ----Planet Section----
+    --------------------*/
+
+    main {
+        padding: 39px 0 0 0;
+    }
+
+    .planetSectionContainer {
+        padding: 0 38.5px;
+    }
+
+    .planetSectionContainer h2, span {
+        letter-spacing: 3.38px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .planetImageContainer {
+        padding-top: 60px;
+    }
+
+    .planetImage {
+        width: 300px;
+    }
+
+    /*--------------------
+    -Planet Text Section--
+    --------------------*/
+
+    .planetTextContainer {
+        padding: 0 97px;
+    }
+
+    /*.planetDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }*/
+
+    .pNavbarContainer {
+    width: 49.73%;
+    height: 34px;
+    margin: 53px 0 32px 0;
+    }
+
+    /*.pNavbar ul {
+        display: flex;
+        justify-content: space-between;
+    }*/
+
+    /*.pNavbar ul li {
+        position: relative;
+    }*/
+
+    .pNavbar ul li, li a {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    /*--------------------
+    Planet Nav Active State
+    --------------------*/
+
+    .planetActivePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .pNavbar ul li:hover .planetActivePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for planet nav active scrolling state*/
+
+    .planetActivePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    /*--------------------
+    -Planet Desc Section--
+    --------------------*/
+
+    .planetDescriptionContainer h1 {
+        font-size: 80px;
+        line-height: 91.68px;
+    }
+
+    .planetDescriptionContainer p {
+        font-size: 16px;
+        line-height: 28px;
+        padding-top: 8px;
+    }
+
+    hr {
+        border-color: hsla(231, 15%, 26%, 1);
+        margin: 49px 0 28px 0;
+    }
+
+    .pStatContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 77%;
+        margin: auto;
+    }
+
+    .pDistanceContainer {
+        padding-bottom: 0;
+        width: 200px;
+    }
+
+    .pTravelTimeContainer {
+        width: 200px;
+    }
+
+    .pDistanceHeading, .pDistanceAmount, .pTravelTimeHeading, .pTravelTimeAmount {
+        display: block;
+        text-align: center;
+    }
+
+    /*.pDistanceHeading, .pTravelTimeHeading {
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.36px;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: hsl(231, 77%, 90%);
+        padding-bottom: 12px;
+    }
+
+    .pDistanceAmount, .pTravelTimeAmount {
+        font-family: "Bellefair", sans-serif;
+        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 32.09px;
+    }*/
+
+    
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/*--------------------
+--Desktop Media Query-
+--------------------*/
+
+@media screen and (min-width: 1250px) {
+    body {
+        background-image: url(http://127.0.0.1:5500/images/destination/background-destination-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: relative;
+    }
+
+    .headerLineDecoration {
+        height: 1px;
+        width: 473px;
+        background-color: hsl(0, 0%, 100%, 0.3);
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 167px;
+        display: block;
+        z-index: 10;
+    }
+
+    .logoAnchor {
+        padding: 64px 0 61px 55px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 38px 165px 38px 123px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 830px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .headerNav ul li a span {
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-right: 5px;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    /*--------------------
+    ----Planet Section----
+    --------------------*/
+
+    main {
+        display: flex;
+        flex-direction: row;
+        padding: 36px 0 0 0;
+        text-align: center;
+    }
+
+    .planetSectionContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 57.77%;
+        padding: 0 157px 0 0;
+    }
+
+    .planetSectionContainer h2, span {
+        letter-spacing: 4.72px;
+        font-size: 28px;
+        line-height: 33.6px;
+    }
+
+    .planetSectionContainer span {
+        font-weight: 700;
+        opacity: .25;
+        padding-right: 28px;
+        padding-left: 166.5px;
+    }
+
+    .planetImageContainer {
+        padding-top: 97px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .planetImage {
+        width: 445px;
+    }
+
+    /*--------------------
+    -Planet Text Section--
+    --------------------*/
+
+    .planetTextContainer {
+        width: 42.22%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 98px 163px 0 0;
+    }
+
+    .planetDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .pNavbarContainer {
+        width: 55%; 
+        height: 28px;
+        margin: 26px 0 37px 0;
+        text-align: left;
+    }
+
+    .pNavbar {
+        height: 34px;
+    }
+
+    .pNavbar ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pNavbar ul li {
+        position: relative;
+    }
+
+    .pNavbar ul li, li a {
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+        color: hsl(231, 77%, 90%);
+    }
+
+    /*--------------------
+    Planet Nav Active State
+    --------------------*/
+
+    .planetActivePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .pNavbar ul li:hover .planetActivePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for planet nav active scrolling state*/
+
+    .planetActivePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    /*--------------------
+    -Planet Desc Section--
+    --------------------*/
+
+    .planetDescriptionContainer h1 {
+        font-family: "Bellefair", sans-serif;
+        text-transform: uppercase;
+        font-size: 100px;
+        line-height: 114.6px;
+        padding: 0 0 14px 0;
+    }
+
+    .planetDescriptionContainer p {
+        font-family: "Barlow", sans-serif;
+        color: hsl(231, 77%, 90%);
+        line-height: 32px;
+        font-size: 18px;
+        text-align: left;
+        padding: 0;
+    }
+
+    hr {
+        border-color: hsla(231, 15%, 26%, 1);
+        margin: 54px 0 28px 0;
+        width: 100%;
+    }
+
+    .pStatContainer {
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        gap: 79px;
+        width: 100%;
+    }
+
+    .pDistanceContainer {
+        padding: 0;
+        width: auto;
+    }
+
+    .pTravelTimeContainer {
+        padding: 0;
+        width: auto;
+    }
+
+    .pDistanceHeading, .pDistanceAmount, .pTravelTimeHeading, .pTravelTimeAmount {
+        display: block;
+        text-align: left;
+    }
+
+    .pDistanceHeading, .pTravelTimeHeading {
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.36px;
+        font-size: 16px;
+        line-height: 16.8px;
+        color: hsl(231, 77%, 90%);
+        padding-bottom: 12px;
+    }
+
+    .pDistanceAmount, .pTravelTimeAmount {
+        font-family: "Bellefair", sans-serif;
+        text-transform: uppercase;
+        font-size: 22px;
+        line-height: 32.09px;
+    }
+}

@@ -1,0 +1,906 @@
+/*
+Colors:
+Black: #0B0D17 hsl(230, 35%, 7%)
+Light-grey: #D0D6F9 hsl(231, 77%, 90%)
+Off-white: #FFFFFF hsl(0, 0%, 100%)
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+}
+
+/*body {
+    width: 100vw;
+    position: relative;
+    background-image: url(http://127.0.0.1:5500/images/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+}*/
+
+body {
+    width: 100vw;
+    position: relative;
+    /*background-color: hsl(230, 35%, 7%);*/
+    background-color: hsla(230, 35%, 7%, 1)
+}
+
+body::before {
+    content: "";
+    background-image: url(http://127.0.0.1:5500/images/technology/background-technology-mobile.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: cover;
+    display: block;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/*--------------------
+------Header----------
+--------------------*/
+
+header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLineDecoration {
+    display: none;
+}
+
+.logoAnchor img {
+    width: 40px;
+}
+
+.hamburgerAnchor img {
+    width: 24px;
+    height: 21px;
+    
+}
+
+/*--------------------
+------Nav Bar----------
+--------------------*/
+
+.headerNav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(247, 241, 241, 0.04);
+    backdrop-filter: blur(40px);
+    height: 100vh;
+    min-width: 254px;
+    z-index: 12;
+}
+
+.headerNav ul {
+    list-style-type: none;
+    padding-left: 32px;
+    text-align: left;
+}
+
+.headerNav ul li {
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.headerNav ul li a {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.headerNav ul li a span {
+    font-weight: 700;
+}
+
+.activePageNavAnchor {
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    width: 4px;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: none;
+}
+
+.headerNav ul li:hover .activePageNavAnchor {
+    display: inline-block;
+    opacity: .5;
+}
+
+/*Use Javascript for active scrolling state*/
+
+.activePageNavAnchor-Scrolling {
+    display: inline-block;
+}
+
+.listCloseIcon {
+    padding: 33.95px 26.45px 64.95px 0;
+    text-align: right;
+}
+
+.navCloseIcon:hover {
+    cursor: pointer;
+}
+
+.hamburgerAnchor:hover {
+    cursor: pointer;
+}
+
+/*Use javascript to open and close nav bar*/
+
+.openNavBar {
+    display: inline-block;
+}
+
+/*--------------------
+--------Main----------
+--------------------*/
+
+/*--------------------
+--Heading Container---
+--------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+}
+
+.techHeadingContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.techHeadingContainer h2, span {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.techHeadingContainer span {
+    font-weight: 700;
+    opacity: .25;
+    padding-right: 16px;
+}
+
+.mainFlexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------------
+---Image Container----
+--------------------*/
+
+.techImageContainer {
+    padding-top: 29px;
+    width: 100%;
+}
+
+.techImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.techImagePortrait {
+    display: none;
+}
+
+/*--------------------
+--Crew Text Container-
+--------------------*/
+
+/*--------------------
+--Crew Nav Bar--------
+--------------------*/
+
+.techTextContiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tNavbarContainer {
+   width: 40.53%; 
+   height: 40px;
+   margin: 34px auto 26px auto;
+}
+
+.tNavbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tNavbar ul li {
+    position: relative;
+}
+
+.tNavbar ul li, li a {
+    list-style-type: none;
+}
+
+.techNavAnchor {
+    width: 40px;
+    height: 40px;
+    border-radius: 6rem;
+    display: inline-block;
+    border: 1px solid hsla(0, 0%, 100%, .25);
+    /*background-color: hsla(0, 0%, 100%, 0.17);*/
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techNavAnchor span {
+    font-family: "Bellefair", sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: hsla(0, 0%, 100%, 1);
+    text-align: center;
+}
+
+/*--------------------
+Crew Nav Active States
+--------------------*/
+
+.techNavAnchor:hover {
+    border-color: hsla(0, 0%, 100%, 1);
+}
+
+/*Use Javascript for crew nav active state on click*/
+
+.techNavAnchor-Active {
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+#techNavAnchor-Span-Active {
+    color: hsla(230, 35%, 7%, 1);
+}
+
+/*--------------------
+-Crew Desc Section--
+--------------------*/
+.techDescriptionContainer {
+    text-align: center;
+}
+
+.techDescriptionContainer h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+    color: hsla(231, 77%, 90%, 1);
+}
+
+.techDescriptionContainer h1 {
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 27.5px;
+    padding: 9px 0 16px 0;
+}
+
+.techDescriptionContainer p {
+    font-family: "Barlow", sans-serif;
+    color: hsla(231, 79%, 90%, 1);
+    line-height: 25px;
+    padding: 0 24px;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        width: 100vw;
+        position: relative;
+        background-color: hsl(230, 35%, 7%);
+    }
+    
+    body::before {
+        content: "";
+        background-image: url(http://127.0.0.1:5500/images/technology/background-technology-tablet.jpg);
+        background-repeat: no-repeat;
+        background-blend-mode: screen;
+        background-size: cover;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .techImageContainer {
+        width: 100vw;
+        font-size: 0;
+        
+    }
+
+    .techImage {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .techImagePortrait {
+        display: none;
+    }
+}
+
+/*--------------------
+--Tablet Media Query--
+--------------------*/
+
+@media screen and (min-width: 650px) {
+    body {
+        width: 100vw;
+        position: relative;
+        background-color: hsl(230, 35%, 7%);
+    }
+    
+    body::before {
+        content: "";
+        background-image: url(http://127.0.0.1:5500/images/technology/background-technology-tablet.jpg);
+        background-repeat: no-repeat;
+        background-blend-mode: screen;
+        background-size: cover;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .headerLineDecoration {
+        display: none;
+    }
+
+    .logoAnchor {
+        padding: 24px 0 21px 39px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 39px 48px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 450px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.36px;
+        font-size: 14px;
+    }
+
+    .headerNav ul li a span {
+        display: none;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    /*--------------------
+    --Heading Container---
+    --------------------*/
+    main {
+        height: 100%;
+    }
+
+    .techHeadingContainer {
+        text-align: left;
+        padding: 40px 0 0 38.5px;
+    }
+
+    .techHeadingContainer h2, span {
+        letter-spacing: 3.38px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .mainFlexContainer {
+        height: 100%;
+    }
+
+    /*--------------------
+    ---Image Container----
+    --------------------*/
+
+    .techImageContainer {
+        padding-top: 60px;
+        width: 100%;
+    }
+
+    .techImage {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .techImagePortrait {
+        display: none;
+    }
+
+    /*--------------------
+    --Crew Text Container-
+    --------------------*/
+
+    /*--------------------
+    --Crew Nav Bar--------
+    --------------------*/
+
+    .tNavbarContainer {
+        width: 27.34%; 
+        height: 60px;
+        margin: 56px auto 44px auto;
+    }
+
+    .techNavAnchor {
+        width: 58px;
+        height: 58px;
+    }
+
+    .techNavAnchor span {
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    /*--------------------
+    Crew Nav Active States
+    --------------------*/
+
+    .techNavAnchor:hover {
+        border-color: hsla(0, 0%, 100%, 1);
+    }
+
+    /*Use Javascript for crew nav active state on click*/
+
+    .techNavAnchor-Active {
+        background-color: hsla(0, 0%, 100%, 1);
+    }
+
+    .techNavAnchor-Span-Active {
+        color: hsla(230, 35%, 7%, 1);
+    }
+
+    /*--------------------
+    -Crew Desc Section--
+    --------------------*/
+
+    .techDescriptionContainer h2 {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+    }
+
+    .techDescriptionContainer h1 {
+        font-size: 40px;
+        line-height: 45.84px;
+        padding: 16px 0 16px 0;
+    }
+
+    .techDescriptionContainer p {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0 155px;
+    }
+    
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        width: 100vw;
+        position: relative;
+        background-color: hsl(230, 35%, 7%);
+    }
+    
+    body::before {
+        content: "";
+        background-image: url(http://127.0.0.1:5500/images/technology/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: screen;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .techImagePortrait {
+        display: none;
+    }
+}
+
+/*--------------------
+--Desktop Media Query-
+--------------------*/
+
+@media screen and (min-width: 1164px) {
+    body {
+        width: 100vw;
+        position: relative;
+        background-color: hsl(230, 35%, 7%);
+    }
+    
+    body::before {
+        content: "";
+        background-image: url(http://127.0.0.1:5500/images/technology/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: screen;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /*--------------------
+    ------Header----------
+    --------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: relative;
+    }
+
+    .headerLineDecoration {
+        height: 1px;
+        width: 473px;
+        background-color: hsl(0, 0%, 100%, 0.3);
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 167px;
+        display: block;
+        z-index: 10;
+    }
+
+    .logoAnchor {
+        padding: 64px 0 61px 55px;
+    }
+
+    .logoAnchor img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hamburgerAnchor img {
+        display: none;
+    }
+
+    /*--------------------
+    ------Nav Bar----------
+    --------------------*/
+
+    .headerNav {
+        display: inline-block;
+        padding: 38px 165px 38px 123px;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40px);
+        min-width: 830px;
+        width: auto;
+        height: 100%;
+    }
+
+    .headerNav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerNav ul li {
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .headerNav ul li a {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .headerNav ul li a span {
+        display: inline-block;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-right: 5px;
+    }
+
+    .activePageNavAnchor {
+        display: block;
+        background-color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -39px;
+        left: 0;
+        right: auto;
+        top: auto;
+        display: none;
+    }
+
+    .headerNav ul li:hover .activePageNavAnchor {
+        display: inline-block;
+        opacity: .5;
+    }
+
+    /*Use Javascript for active scrolling state*/
+
+    .activePageNavAnchor-Scrolling {
+        display: inline-block;
+    }
+
+    .listCloseIcon {
+        display: none;
+    }
+
+    /*--------------------
+    --------Main----------
+    --------------------*/
+
+    /*--------------------
+    --Heading Container---
+    --------------------*/
+
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0;
+    }
+
+    .techHeadingContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 36px 0 0 166px;
+    }
+
+    .techHeadingContainer h2, span {
+        letter-spacing: 4.72px;
+        font-size: 28px;
+        line-height: 33.6px;
+    }
+
+    .techHeadingContainer span {
+        padding-right: 24px;
+    }
+
+    .mainFlexContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 26px;
+    }
+
+    /*--------------------
+    ---Image Container----
+    --------------------*/
+
+    .techImageContainer {
+        padding-top: 0;
+        width: 35.76%;
+    }
+
+    .techImage {
+        display: none;
+    }
+
+    .techImagePortrait {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /*--------------------
+    --Crew Text Container-
+    --------------------*/
+
+    /*--------------------
+    --Crew Nav Bar--------
+    --------------------*/
+
+    .techTextContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 64.23%;
+        gap: 80px;
+        padding: 0 130px 0 165px;
+    }
+
+    .tNavbarContainer {
+        width: 80px; 
+        height: 54.98%;
+        margin: auto;
+    }
+    .tNavbar { 
+        height: 100%;
+    }
+
+    .tNavbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        height: 100%;
+    }
+
+    .tNavbar ul li {
+        position: relative;
+    }
+
+    .tNavbar ul li, li a {
+        list-style-type: none;
+    }
+
+    .techNavAnchor {
+        width: 80px;
+        height: 80px;
+        border-radius: 10rem;
+    }
+
+    .techNavAnchor span {
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    /*--------------------
+    Crew Nav Active States
+    --------------------*/
+
+    .techNavAnchor:hover {
+        border-color: hsla(0, 0%, 100%, 1);
+    }
+
+    /*Use Javascript for crew nav active state on click*/
+
+    .techNavAnchor-Active {
+        background-color: hsla(0, 0%, 100%, 1);
+    }
+
+    .techNavAnchor-Span-Active {
+        color: hsla(230, 35%, 7%, 1);
+    }
+
+    /*--------------------
+    -Crew Desc Section--
+    --------------------*/
+    .techDescriptionContainer {
+        text-align: left;
+    }
+
+    .techDescriptionContainer h2 {
+        font-size: 16px;
+        line-height: 19.2px;
+        letter-spacing: 2.7px;
+    }
+
+    .techDescriptionContainer h1 {
+        font-size: 56px;
+        line-height: 64.18px;
+        padding: 11px 0 17px 0;
+    }
+
+    .techDescriptionContainer p {
+        font-size: 18px;
+        line-height: 32px;
+        padding: 0 25px 0 0;
+    }
+}

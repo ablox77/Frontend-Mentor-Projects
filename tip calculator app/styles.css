@@ -1,0 +1,358 @@
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/*### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    font-family: 'Space Mono', sans-serif;
+    color: var(--Dark-grayish-cyan);
+}
+
+input, button {
+    font-size: 24px;
+    font-family: 'Space Mono', sans-serif;
+    border-radius: .3rem;
+    height: 45px;
+    border: none;
+    width: 100%;
+}
+
+main {
+    background-color: var(--Light-grayish-cyan);
+}
+
+.container {
+    width: 100%;
+    background-color: var(--White);
+    border-radius: 1.25rem 1.25rem 0  0;
+    padding: 1.75rem;
+}
+
+header {
+    padding: 3rem;
+    text-align: center;
+}
+
+.left-side {
+    padding: 0 .25rem;
+}
+
+.bill-input-container, .number-of-people-input-container {
+    position: relative;
+    margin-top: .4rem;
+    margin-bottom: 2rem;
+}
+
+.input-image-icons {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.bill-input {
+    background: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.bill-input::placeholder, .number-of-people-input::placeholder {
+    color:hsl(184, 14%, 56%);
+}
+
+.bill-input:focus, .custom-percent-btn:focus, .number-of-people-input:focus {
+    outline: 1px solid hsl(172, 67%, 45%);
+}
+
+.bill-input:hover, .custom-percent-btn:hover, .number-of-people-input:hover {
+    cursor: pointer;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.select-tip-container {
+    margin-bottom: 2rem;
+}
+
+.tip-percent-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.dark-green-percent-btn {
+    background-color: hsl(183, 100%, 15%);
+    color: var(--Very-light-grayish-cyan);
+}
+
+.dark-green-percent-btn:hover {
+    background-color:hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.custom-percent-btn, .number-of-people-input {
+    text-align: right;
+    padding-right: 1rem;
+    background-color:rgb(241, 250, 250);
+}
+
+.number-of-people-container {
+    position: relative;
+}
+
+.number-of-people-input-container {
+    margin-top: .5rem;
+}
+
+.error-message {
+    display: none;
+}
+
+.active-input-error-border {
+    border: 2px solid red;
+}
+
+.active-input-error-message {
+    display: block;
+    position: absolute;
+    color: red;
+    right: 0;
+    top: 0;
+}
+
+.right-side {
+    background-color: hsl(183, 100%, 15%);
+    padding: 2.5rem 1.75rem 1.75rem 1.75rem;
+    border-radius: 1rem;
+}
+
+.tip-amount-per-person-container, .total-per-person-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+
+.tip-amount-text, .total-amount-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.white-text {
+    color: var(--Very-light-grayish-cyan);
+}
+
+.per-person {
+    font-size: .8rem;
+}
+
+.tip-amount, .total-amount {
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.reset-button {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(184, 96%, 17%);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.reset-button:hover {
+    cursor: pointer;
+    background-color: hsl(171, 36%, 75%);
+}
+
+/* Tablet Media Query
+-----------------------*/
+
+@media screen and (min-width: 450px) {
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+
+    main {
+        min-height: 1000px;
+    }
+}
+
+/* Desktop Media Query
+-----------------------*/
+
+@media screen and (min-width: 1250px) {
+
+    input, button {
+        font-size: 24px;
+        font-family: 'Space Mono', sans-serif;
+        border-radius: .3rem;
+        height: 45px;
+        border: none;
+        width: 100%;
+    }
+
+    main {
+        min-height: 900px;
+    }
+
+    .container {
+        width: 65%;
+        border-radius: 1.5rem;
+        padding: 1.75rem 1.75rem 1.75rem 2.5rem;
+        display: flex;
+        gap: 3rem;
+        margin: auto;
+    }
+    
+    header {
+        padding: 8rem 0 5rem 0;
+    }
+    
+    .left-side {
+        padding: .5rem 0 .5rem 0;
+        width: 50%;
+    }
+    
+    .bill-input-container, .number-of-people-input-container {
+        position: relative;
+        margin-top: .4rem;
+        margin-bottom: 2rem;
+    }
+
+    .number-of-people-input-container {
+        margin-top: .5rem;
+        margin-bottom: 0;
+    }
+    
+    .input-image-icons {
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+    
+    .bill-input {
+        background: var(--Very-light-grayish-cyan);
+        color: var(--Very-dark-cyan);
+        text-align: right;
+        padding-right: 1rem;
+    }
+    
+    .bill-input::placeholder, .number-of-people-input::placeholder {
+        color:hsl(184, 14%, 56%);
+    }
+    
+    .bill-input:focus, .custom-percent-btn:focus, .number-of-people-input:focus {
+        outline: 1px solid hsl(172, 67%, 45%);
+    }
+    
+    .bill-input:hover, .custom-percent-btn:hover, .number-of-people-input:hover {
+        cursor: pointer;
+        border: 2px solid hsl(172, 67%, 45%);
+    }
+    
+    .select-tip-container {
+        margin-bottom: 2rem;
+    }
+    
+    .tip-percent-btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        width: 100%;
+        margin-top: .5rem;
+    }
+    
+    .dark-green-percent-btn {
+        background-color: hsl(183, 100%, 15%);
+        color: var(--Very-light-grayish-cyan);
+    }
+    
+    .dark-green-percent-btn:hover {
+        background-color:hsl(172, 67%, 45%);
+        color:hsl(183, 100%, 15%);
+    }
+    
+    .custom-percent-btn, .number-of-people-input {
+        text-align: right;
+        padding-right: 1rem;
+        background-color:rgb(241, 250, 250);
+    }
+    
+    .right-side {
+        background-color: hsl(183, 100%, 15%);
+        padding: 2.5rem 1.75rem 1.75rem 1.75rem;
+        border-radius: 1rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .tip-amount-per-person-container, .total-per-person-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.75rem;
+        margin-top: .5rem;
+    }
+
+    .total-per-person-container {
+        flex-grow: 1;
+        align-items: flex-start;
+    }
+    
+    .tip-amount-text, .total-amount-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .white-text {
+        color: var(--Very-light-grayish-cyan);
+    }
+    
+    .per-person {
+        font-size: .8rem;
+    }
+    
+    .tip-amount, .total-amount {
+        font-size: 2rem;
+        color: hsl(172, 67%, 45%);
+    }
+    
+    .reset-button {
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(184, 96%, 17%);
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+}
